@@ -11,7 +11,6 @@ public class Percolation {
                id[i][j] = (i * n) + j;
            }
        }
-       return id;
    }
 //   public    void open(int row, int col)    // open site (row, col) if it is not open already
 //   public boolean isOpen(int row, int col)  // is site (row, col) open?
@@ -21,6 +20,6 @@ public class Percolation {
 
    public static void main(String[] args)   // test client (optional)
    {
-       int[][] Precolation.Percolation(2);
+       Percolation newId = new Percolation(2);
    }
 }
