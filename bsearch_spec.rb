@@ -22,5 +22,9 @@ describe Bsearch do
     it 'throws an error if target greater than array values' do
       expect { subject_hi.search }.to raise_error ArgumentError
     end
+
+    it 'throws an error if target lesser than array values' do
+      expect { subject_lo.search }.to raise_error ArgumentError
+    end
   end
 end
