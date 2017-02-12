@@ -7,8 +7,10 @@ class Bsearch
   end
 
   def check
-    if @target > @arr.last or @target < @arr.first
+    if @target > @arr.last
       raise ArgumentError, "Target (#{@target}) must be smaller than end of array (#{@arr[-1]})"
+    elsif @target < @arr.first
+      raise ArgumentError, "Target (#{@target}) must be greater than beginning of array (#{@arr[0]})"
     end
   end
   
