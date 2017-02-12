@@ -1,8 +1,8 @@
 class Bsearch
   attr_reader :target
-  def initialize(target, set_start, set_end)
+  def initialize(target, arr1, arr2)
     @target = target
-    @arr = (set_start..set_end).to_a
+    @arr = ([arr1, arr2].min..[arr1, arr2].max).to_a
     check
   end
 
