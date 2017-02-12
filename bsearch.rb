@@ -3,8 +3,14 @@ class Bsearch
   def initialize(target, set_start, set_end)
     @target = target
     @arr = (set_start..set_end).to_a
+    check
   end
 
+  def check
+    if @target > @arr.last or @target < @arr.first
+      raise ArgumentError, "Target (#{@target}) must be smaller than end of array (#{@arr[-1]})"
+    end
+  end
   
   def search
     min = @arr[0]
@@ -14,7 +20,7 @@ class Bsearch
     n = @arr[(@arr.index(max) + @arr.index(min)) / 2]
 
     until @target == n
-      n = @arr[(arr.index(max) + @arr.index(min)) / 2]
+      n = @arr[(@arr.index(max) + @arr.index(min)) / 2]
       if @target > n
         i += 1
         puts "Bisector #{n} smaller than #{@target}!"
